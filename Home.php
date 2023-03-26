@@ -28,14 +28,14 @@
                     data: {ChatText:ChatText},
                     success:function() {
                         $("$ChatMessages").load("DisplayMessage.php");
-                        $("#zChatText").val("");
+                        $("#ChatText").val("");
                     }
                     
                 });
             }
         });
 
-        setInterval(() => {
+        setInterval(function()  {
             $("#ChatMessages").load("DiplayMessage.php");
         }, 1500);
 

@@ -75,4 +75,70 @@ class user{
 	}
 
 }
+
+
+class chat{
+	private $ChatId,$ChatUserId,$ChatText;
+
+	public function getChatId(){
+		return $this->ChatId;
+
+	}
+
+	public function setChatId($ChatId){
+		$this->ChatId=$ChatId;
+	}
+
+	public function getChatUserId(){
+		return $this->ChatUserId;
+
+	}
+
+	public function setChatUserId($ChatUserId){
+		$this->ChatUsertId=$ChatUserId;
+	}
+
+
+	public function getChatText(){
+		return $this->ChatText;
+
+	}
+
+	public function setChatText($ChatText){
+		$this->ChatText=$ChatText;
+	}
+
+		public function InsertChatMessage(){
+			include "conn.php";
+			$req=$bdd->prepare("INSERT INTO chats(ChatUserId,ChatText) VALUES (:ChatUserId,:ChatText)");
+
+			$req->execute(array(
+					'ChatUserId'=>$this->getChatUserId();
+					'ChatText'=>$this->getChatText();
+
+
+			) );
+
+		}
+
+		public function DisplayMessage(){
+			include "conn.php";
+
+			$ChatReq=$bdd->prepare("SELECT * FROM chats ORDER BY ChatId");
+			$ChatReq->execute();
+
+			while($DataChat = $ChatReq ->fetch()){
+				$UserReq= $bdd->prepare("SELECT * FROM users WHERE UserId = :UserId");
+
+				$UserReq->execute(array(
+
+					'UserId'=>$Datachat['ChatUserId'];
+
+				));
+
+				$DataUser= $UserRew->fetch();
+			}
+		}
+
+}
 ?>
