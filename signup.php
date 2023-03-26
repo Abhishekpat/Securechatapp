@@ -32,6 +32,20 @@
 				<tr>
 					<td><input type="submit" value="SignUp"></td>
 				</tr>
+
+				<?php
+					if(isset($_GET['success'])){
+
+
+				?>
+				<tr>
+					<td></td><td><span style="color:green;">userInserted</span></td>
+				</tr>
+
+				<?php
+					}
+				?>
+
 			</table>
 
 		</form>

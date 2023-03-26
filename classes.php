@@ -7,7 +7,7 @@ class user{
 		return $this->UserId;
 	}
 
-	public function setUserId(){
+	public function setUserId($UserId){
 		$this->UserId=$UserId;
 	}
 
@@ -16,7 +16,7 @@ class user{
 		return $this->UserName;
 	}
 
-	public function setUserName(){
+	public function setUserName($UserName){
 		$this->UserName=$UserName;
 	}
 
@@ -25,7 +25,7 @@ class user{
 		return $this->UserMail;
 	}
 
-	public function setUserMail(){
+	public function setUserMail($UserMail){
 		$this->UserMail=$UserMail;
 	}
 
@@ -34,7 +34,7 @@ class user{
 		return $this->UserPassword;
 	}
 
-	public function setUserPassword(){
+	public function setUserPassword($UserPassword){
 		$this->UserPassword=$UserPassword;
 	}
 
