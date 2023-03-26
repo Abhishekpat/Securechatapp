@@ -19,7 +19,7 @@
 
         
             <tr>
-                <td></td><td><span >Check your Email</span></td>
+                <td></td><td><span style= "color:red;">Check your Email</span></td>
             </tr>
         <?php
             }
