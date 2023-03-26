@@ -68,7 +68,7 @@ class user{
 				$this->setUserName($data['UserName']);
 				$this->setUserPassword($data['UserPassword']);
 				$this->setUserMail($data['UserMail']);
-				heaser("Location:Home.php");
+				header("Location:Home.php");
 				return true;
 			}
 		}
