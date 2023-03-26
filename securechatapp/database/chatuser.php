@@ -1,5 +1,7 @@
 <?php
 
+include 'register.php';
+include 'database_connection.php';
 	// chat user 
 
 class chatuser
@@ -18,7 +20,7 @@ class chatuser
 
 	public function __construct()
 	{
-		require_oce('database_connection.php');
+		require_onece('database_connection.php');
 		$database_object = new database_connection;
 		$this->connect = $database_object->connect();
 	}
@@ -141,7 +143,7 @@ class chatuser
 		return $path;
 	}
 
-	function get-user_data_by_email()
+	function get_user_data_by_email()
 	{
 		$query = "SELECT * FROM chat_user_table WHERE user_email= :user_email";
 		$statement = $this->connect->prepare($query);

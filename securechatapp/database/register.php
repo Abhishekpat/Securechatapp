@@ -1,5 +1,6 @@
 <?php
-
+include 'chatuser.php';
+include 'database_connection.php';
 $error = '';
 $success_message = '';
 
@@ -12,7 +13,7 @@ $success_message = '';
 			header('location:chatroom.php');
 		}
 
-		require_once('securechatapp/database/chatuser.php');
+		
 
 		$user_object = new chatuser;
 
