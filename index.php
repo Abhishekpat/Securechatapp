@@ -8,11 +8,18 @@
 </head>
 <body>
     <form id="form1" method="post" action="UserLogin.php">
-        <h2>Login Form</h2>
-        <table>
-        <input type="Email" name="UserMailLogin" placeholder="Email" required>
-        <input type="password" name="UserPasswordLogin" placeholder="Password" required>
-        <input type="submit" value="Login">
+       <table>
+            <tr>
+                <td><input type="Email" name="UserMailLogin" placeholder="Enter yourr Email" required></td>
+            </tr>
+
+            <tr>
+                <td><input type="password" name="UserPasswordLogin" placeholder="Enter your Password" required></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Login"></td>
+            </tr>
         <?php
         if(isset($_GET['error'])){
         ?>
