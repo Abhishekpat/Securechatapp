@@ -2,7 +2,7 @@
 
 	//Database connection
 
-	class database_connection
+	class Database_connection
 	{
 
 		function connect()

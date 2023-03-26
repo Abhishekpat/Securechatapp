@@ -54,6 +54,42 @@ $success_message = '';
 
 	}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign-up form</title>
+</head>
+<body>
+	<form  method="post" id="register_form">
+		<div class="form-group">
+			<label >Enter Name</label>
+			<input type="text" name="user_name" id="user_name" class="form-control" data-parsley-pattern="/^[a-zA-Z\s]+$/" required/>
+		</div>
 
+		<div class="form-group">
+			<label>Enter Email</label>
+			<input type="text" name="user_email" id="user_email" class="form-control" data-parsley-pattern="email" required/>
+		</div>
+
+		<div class="form-group">
+			<label>Enter Password</label>
+			<input type="password" name="user_password" id="user_password" class="form-control" data-parsley-minlength="6" data-parsley-maxlength="12" data-parsley-pattern="^[a-zA-Z\s]+$" required/>
+		</div>
+
+		<div class="form-group text-center">
+			<input type="submit" name="register" class="btn btn-success" value="Register">
+		</div>
+	</form>
+</body>
+</html>
 
 ?>
+
+<script>
+	$(document).ready(function(){
+		$('#register_form').parsley();
+	})
+</script>
