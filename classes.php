@@ -49,7 +49,30 @@ class user{
 		));
 	}
 	
+	public function Userlogin(){
+		include "conn.php";
+		$req=$bdd->prepare("SELECT * FROM users WHERE UserMail = :UserMail AND UserPassword=:UserPassword");
 
+		$req->execute(array(
+			'UserMail'=>$this->getUserMail(),
+			'UserPassword'=>$this->getUserPassword()
+
+		));
+
+		if($req->rowCount()==0){
+			header("Location:index.php?error=1");
+			return false;
+		}else{
+			while($data=$req->fetch()){
+				$this->setUserId($data['UserId']);
+				$this->setUserName($data['UserName']);
+				$this->setUserPassword($data['UserPassword']);
+				$this->setUserMail($data['UserMail']);
+				heaser("Location:Home.php");
+				return true;
+			}
+		}
+	}
 
 }
 ?>
