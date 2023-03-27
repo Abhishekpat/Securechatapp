@@ -47,9 +47,7 @@
 </head>
 <body>
     <h2>Welcome <span>
-        <?php 
-        echo $_SESSION['UserName'];
-        ?>
+        
         
     </span></h2>
 

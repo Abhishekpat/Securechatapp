@@ -113,8 +113,8 @@ class chat{
 			$req=$bdd->prepare("INSERT INTO chats(ChatUserId,ChatText) VALUES (:ChatUserId,:ChatText)");
 
 			$req->execute(array(
-					'ChatUserId'=>$this->getChatUserId();
-					'ChatText'=>$this->getChatText();
+					'ChatUserId'=>$this->getChatUserId(),
+					'ChatText'=>$this->getChatText()
 
 
 			) );
@@ -132,7 +132,7 @@ class chat{
 
 				$UserReq->execute(array(
 
-					'UserId'=>$Datachat['ChatUserId'];
+					'UserId'=>$Datachat['ChatUserId']
 
 				));
 
