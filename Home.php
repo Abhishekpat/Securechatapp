@@ -6,13 +6,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css"> <!--We had diffferent css-->
+    
+    <link rel="stylesheet" type="text/css" href="home.css"> <!--We had diffferent css-->
+    <script type="text/javascript" src="jquery.js"></script>
+  
 
     <title>Welcome to my chat</title>
-    <script src="jquery.js"></script>
+    
 
     <script type="text/javascript">
 
@@ -27,7 +27,7 @@
                     url: 'InsertMessage.php',
                     data: {ChatText:ChatText},
                     success:function() {
-                        $("$ChatMessages").load("DisplayMessage.php");
+                        $("#ChatMessages").load("DisplayMessage.php");
                         $("#ChatText").val("");
                     }
                     

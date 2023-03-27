@@ -3,6 +3,10 @@
 
 	include"classes.php";
 
-	if(isset[$_POST['']])
-
+	if(isset[$_POST['ChatText']]){
+		$chat = new chat();
+		$chat->setChatUserId($_SESSION['UserId']);
+		$chat->setChatText($_SESSION['UserText']);
+		$chat->InsertChatMessage();
+	}
 ?>

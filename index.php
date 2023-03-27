@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="form1" method="post" action="UserLogin.php">
+    <form id="form1" method="post" action="Home.php">
        <table>
             <tr>
                 <td><input type="Email" name="UserMailLogin" placeholder="Enter yourr Email" required></td>

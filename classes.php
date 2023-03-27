@@ -136,7 +136,22 @@ class chat{
 
 				));
 
-				$DataUser= $UserRew->fetch();
+				$DataUser= $UserReq->fetch();
+				?>
+				<span class="UserNameS"><?php echo $DataUser['UserName'];
+				?>
+				
+			</span>
+			<strong style = "color:yellow">Says</strong><br>
+			<span class="UserMessageS" style="color:red; background-color:#f1f1f1; border-radius: 5px; padding: 1.5px; margin: 10px; border: 2px solid 
+			#dedede;" >
+			 <?php 
+				echo htmlspecialchars($DataChat['ChatText']);
+					?></span><br><br>
+
+					
+
+				<?php	
 			}
 		}
 
